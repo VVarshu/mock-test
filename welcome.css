@@ -1,0 +1,156 @@
+/* Background Image */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.shutterstock.com/image-illustration/abstract-blurry-blue-background-600nw-329984135.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  
+}
+
+/* Drop-in Animation for "WELCOME" */
+.welcome-header {
+    margin-bottom: 60px;
+
+    
+}
+
+
+.welcome-title span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: drop-in 0.5s ease-out forwards;
+    font-size: 500%;
+
+}
+
+/* Keyframes for drop-in animation */
+@keyframes drop-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Individual letter delays */
+.letter-0 { animation-delay: 0s; }
+.letter-1 { animation-delay: 0.2s; }
+.letter-2 { animation-delay: 0.4s; }
+.letter-3 { animation-delay: 0.6s; }
+.letter-4 { animation-delay: 0.8s; }
+.letter-5 { animation-delay: 1s; }
+.letter-6 { animation-delay: 1.2s; }
+
+/* Button Styles */
+.welcome-buttons {
+    margin: 20px 0;
+    font-size: 260%;
+}
+
+.btn-login, .btn-register {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    font-size: 120%;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-login:hover, .btn-register:hover {
+    background-color: #2980b9;
+}
+
+/* Information List with Alternating Animations */
+.welcome-info {
+    margin-top: 40px;
+}
+
+.welcome-info h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.welcome-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.welcome-info li {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 0.8s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.info-left {
+    animation: slide-in-left 0.8s ease-in-out forwards;
+}
+
+.info-right {
+    animation: slide-in-right 0.8s ease-in-out forwards;
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.info-left {
+    animation-delay: 0.2s;
+}
+
+.info-right {
+    animation-delay: 0.4s;
+}
+
+.info-left:nth-child(odd) {
+    animation-delay: 0.6s;
+}
+
+.info-right:nth-child(even) {
+    animation-delay: 0.8s;
+}

@@ -1,0 +1,37 @@
+/* Score.css */
+
+.score-page {
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Full viewport height */
+    background-image: url('https://img.freepik.com/free-vector/get-trendy-look-with-blurred-blue-gradient-banner-website_1017-44314.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Text color for contrast */
+    text-align: center; /* Center text alignment */
+}
+
+h2, h3, p {
+    font-weight: bold; /* Make text bold */
+    margin: 10px 0; /* Add vertical spacing between elements */
+    font-size: 200%;
+}
+
+button {
+    padding: 20px 30px;
+    margin-top: 20px; /* Add margin for spacing */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 150%;
+}
+
+/* Change button color on hover */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

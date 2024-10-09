@@ -1,0 +1,112 @@
+/* Background for the login page */
+.login-container ,.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1302679475/vector/abstract-technical-lock-background.jpg?s=612x612&w=0&k=20&c=SkY_ZRLA9l2BHHJ3BTbNv48uV3GvOHrsUD5Dd68JG_8='); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadeInBackground 2s ease-in-out; /* Fade in animation for background */
+}
+
+/* Animation for background */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Login form container styling */
+.form-container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 650px;
+    opacity: 0;
+    transform: translateY(100px); /* Slide from bottom */
+    animation: slideUp 1.5s ease-out forwards; /* Animation */
+    background-image: url('https://img.freepik.com/premium-photo/abstract-blue-background-with-white-glowing-lines-forming-network-pattern_1174990-197517.jpg');
+}
+
+/* Keyframes for sliding up and fading in the form */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /* Starts off-screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Input field styling */
+.form-container input {
+    width: 80%;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Add smooth transitions */
+}
+
+/* Input hover effect */
+.form-container input:hover, 
+.form-container input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Highlight on hover/focus */
+}
+
+/* Button styling */
+.form-container button {
+    width: 80%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Add transitions */
+    font-size: 150%;
+}
+
+/* Button hover effect */
+.form-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Button grows slightly */
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    margin: 10px 0;
+}
+
+/* Sign-up link styling */
+.signup-link {
+    margin-top: 10px;
+    font-size: 200%;
+}
+
+.signup-link a {
+    color: #ced7e1;
+    text-decoration: none;
+    transition: color 0.3s; /* Add transition */
+}
+
+/* Link hover effect */
+.signup-link a:hover {
+    color: #656e77;
+    text-decoration: underline;
+}
+h1{
+    font-size: 250%;
+}

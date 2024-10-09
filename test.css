@@ -1,0 +1,115 @@
+/* Scoped styles for Test.js component */
+
+/* Style for the body inside test-page */
+.test-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://www.pngmagic.com/product_images/light-blue-website-background-image.jpg'); /* Light background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Center the timer at the top inside test-page */
+.test-page h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Style for the questions row */
+.test-page .questions-row {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    justify-content: center; /* Center the questions in the row */
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 80px; /* Adjust to make space for the timer */
+}
+
+/* Style for the questions container inside test-page */
+.test-page .question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Fixed width for each question */
+    animation: slideIn 0.8s ease-in-out; /* Animation for questions */
+}
+
+/* Animation for questions to slide in from the top */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for each question inside test-page */
+.test-page h4 {
+    font-size: 38px;
+    color: #333;
+}
+
+/* Style for the radio buttons and options inside test-page */
+.test-page div input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007bff; /* Change radio button color */
+    size: 15px;
+}
+
+.test-page div {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #555;
+}
+
+/* Center the Submit Test button inside test-page */
+.test-page button {
+    display: block;
+    margin: 40px auto 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover inside test-page */
+.test-page button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the container holding all questions inside test-page */
+.test-page .test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+}

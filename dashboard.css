@@ -1,0 +1,136 @@
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://pngmagic.com/product_images/light-blue-gradient-background-for-websites-and-apps_ImW.jpeg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    animation: fadeInDashboard 1.5s ease-in-out; /* Fade-in effect for the whole container */
+}
+
+/* Fade-in animation for the dashboard content */
+@keyframes fadeInDashboard {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below the visible area */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Settle into the final position */
+    }
+}
+
+/* Title styling */
+.dashboard-container h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #f9d864; /* Optional: Add a vibrant color for the title */
+    letter-spacing: 2px;
+    animation: slideInTitle 1s ease-out; /* Slide-in effect for the title */
+}
+
+/* Slide-in animation for the title */
+@keyframes slideInTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Slide in from the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End position */
+    }
+}
+
+/* Instructions styling */
+.dashboard-container p {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: rgb(14, 31, 77);
+}
+
+.dashboard-container ol {
+    list-style: decimal;
+    text-align: left;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    max-width: 500px;
+    color: rgb(17, 44, 77);
+}
+
+/* List items - Animating odd items from left and even items from right */
+.dashboard-container ol li {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    opacity: 0; /* Start invisible */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+/* Odd items slide in from the left */
+.dashboard-container ol li:nth-child(odd) {
+    animation-name: slideInLeft;
+}
+
+/* Even items slide in from the right */
+.dashboard-container ol li:nth-child(even) {
+    animation-name: slideInRight;
+}
+
+/* Keyframe animation for sliding in from the left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Start offscreen to the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End in place */
+    }
+}
+
+/* Keyframe animation for sliding in from the right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Start offscreen to the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End in place */
+    }
+}
+
+/* Button styling */
+.dashboard-container button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.dashboard-container button:hover {
+    background-color: #ff9900;
+    transform: translateY(-5px); /* Button lifts up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow deepens */
+}
+
+/* Button focus/active effect */
+.dashboard-container button:active {
+    transform: translateY(0); /* Reset position when clicked */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow returns to normal */
+}
